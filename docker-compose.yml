@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:latest  # This specifies the Nginx image to use
+    ports:
+      - "8080:8080"  # This port mapping allows the Nginx container to listen on port 8080 on the host machine
+    restart: always  # This ensures that the Nginx container restarts automatically if it crashes or the Docker daemon restarts
+    volumes:
+      - ./nginx/html:/usr/share/nginx/html  # This volume mounts the html directory from the host into the Nginx container
+      - ./nginx/conf.d:/etc/nginx/conf.d  # This volume mounts the conf.d directory from the host into the Nginx container
+    extra_hosts:
+      - "host.docker.internal:host-gateway"  # This extra host is used to allow the Nginx container to access the host machine
