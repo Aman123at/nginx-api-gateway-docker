@@ -16,7 +16,7 @@ A robust API Gateway implementation using Nginx, designed to handle routing and 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/your-repo/nginx-api-gateway-docker.git
+git clone https://github.com/nginx-api-gateway-docker.git
 cd nginx-api-gateway-docker
 ```
 
